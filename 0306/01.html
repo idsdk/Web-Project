@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            transition: background-color 1s;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome HTML5, CSS3, Javascript</h1>
+    <h1 id="dynamic-content">Welcome HTML5, CSS3, Javascript</h1>
+
+    <script>
+        const messages = [
+            "Welcome HTML5, CSS3, Javascript",
+            "Enjoy coding with HTML5",
+            "Style with CSS3",
+            "Enhance with Javascript"
+        ];
+
+        const colors = [
+            "#FF5733", // Red
+            "#33FF57", // Green
+            "#3357FF", // Blue
+            "#FF33A1"  // Pink
+        ];
+
+        let index = 0;
+
+        function updateContent() {
+            index = (index + 1) % messages.length;
+            document.getElementById("dynamic-content").textContent = messages[index];
+            document.body.style.backgroundColor = colors[index];
+        }
+
+        setInterval(updateContent, 3000);
+    </script>
 </body>
-Welcome people. This is a my first html page. It is my first journey for my entire life. It will be good journey about you and me. I hope you enjoy it.
 </html>
