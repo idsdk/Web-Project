@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 웹패턴1(메뉴 왼 -> 위)</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 960px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #menu{
+            width: 260px;
+            float:left;
+        }
+        #section{
+            width: 700px;
+            float: right;
+        }
+        li {
+            list-style: none;
+        }
+
+        @media screen and (max-width: 767px) {
+            body {
+                width: auto
+            }
+            #menu { 
+                width: auto;
+                float: none;
+            }
+            #section {
+                width: auto;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    <div id ="section">
+        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse iure aliquam suscipit dolorem quidem. Necessitatibus accusamus eligendi alias ab dicta sint natus, id sit ratione temporibus rem consequatur, repellat ullam?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores sit ipsa obcaecati vitae, eos voluptates ratione neque animi cumque ut accusamus quos adipisci facilis doloribus porro optio culpa hic nulla!</p>
+    </div>
+      <div id = "menu">
+        <ul>
+            <li>Menu 1</li>
+            <li>Menu 2</li>
+            <li>Menu 3</li>
+        </ul>
+    </div>
+</body>
+</html>
