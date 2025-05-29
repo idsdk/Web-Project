@@ -9,12 +9,25 @@
 		function changeImage(){
 			img = document.getElementById("img1");
 			img.src = "imgs/connell and marianne.jpg";
-			img.width = 600;
+			img.width = 200;
 		}
 
 		function reset(){
 			img.src = "";
 			img.width = 0;
+		}
+
+		function selectedChangeImage(){
+			let select = document.querySelector("select");
+			img = document.getElementById("img1");
+			let index = select.selectedIndex;
+			img.src = select.options[index].value;
+		}
+
+		function cheerUp(){
+			//사용자 정의 속성을 body요소 객체에 설정
+			document.body.setAttribute("data-cheerup", "normal people is the best drama on BBC I've ever seen")
+			alert(document.body.getAttribute("data-cheerup"));
 		}
 	</script>
 </head>
@@ -22,6 +35,15 @@
 	<hr>
 	<button onclick="changeImage()">노말피플</button>
 	<button onclick="reset()">Reset</button>
+	<button onclick="cheerUp()">Cheer Up!</button>
+	<br>
+	<select onchange="selectedChangeImage()">
+		<option value="">Select am image</option>
+		<option value="imgs/connell.jpg">코넬</option>
+		<option value="imgs/marianne.jpg">매리앤</option>
+		<option value="imgs/sean bean.jpg">숀빈</option>
+		<option value="imgs/nikolaj.jpg">니콜라이 코스터 왈도</option>
+	</select>
 	<hr>
 	<img id="img1">
 </body>
