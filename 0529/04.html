@@ -29,9 +29,21 @@
 			document.body.setAttribute("data-cheerup", "normal people is the best drama on BBC I've ever seen")
 			alert(document.body.getAttribute("data-cheerup"));
 		}
+		
+		let clock;
+		function callSetClock(){
+			clock = document.querySelector("h1");
+			setClock();
+			setInterval(setClock, 1000);
+		}
+
+		function setClock(){
+			let now = new Date();
+			clock.innerHTML = now.toString();
+		}
 	</script>
 </head>
-<body>
+<body onload="callSetClock()">
 	<hr>
 	<button onclick="changeImage()">노말피플</button>
 	<button onclick="reset()">Reset</button>
@@ -46,5 +58,8 @@
 	</select>
 	<hr>
 	<img id="img1">
+	<hr>
+	<h1></h1>
+	<hr>
 </body>
 </html>
