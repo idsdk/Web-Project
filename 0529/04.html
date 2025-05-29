@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		let img;
+		function changeImage(){
+			img = document.getElementById("img1");
+			img.src = "imgs/connell and marianne.jpg";
+			img.width = 600;
+		}
+
+		function reset(){
+			img.src = "";
+			img.width = 0;
+		}
+	</script>
+</head>
+<body>
+	<hr>
+	<button onclick="changeImage()">노말피플</button>
+	<button onclick="reset()">Reset</button>
+	<hr>
+	<img id="img1">
+</body>
+</html>
