@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(document).ready(
+			function(){
+				$("#btn1").click(
+					function(){
+						$("#content1").fadeToggle('slow');
+					}
+				);
+			}
+		);
+	</script>
+</head>
+<body>
+	<button id="btn1">Visual Effect</button>
+	<br>
+	<!-- fadeIn()를 사용하려면 div요소에 display:non -->
+	<div id="content1">
+		<h1>Lorem ipsum dolor sit amet</h1>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. In illo enim tempore quam inventore, voluptas mollitia animi dolores, deserunt qui consequuntur consequatur odit et minus eveniet. Doloremque commodi similique velit?
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, maiores architecto suscipit cumque minima laborum laboriosam explicabo sit, dolorem, ea tempora molestiae! Quisquam vero aliquam nostrum. Accusamus ratione molestias dolor.
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque minima est numquam voluptates natus excepturi veritatis nisi ea iusto, architecto similique officiis voluptas fugit nam ipsum magni sed laboriosam consectetur.
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim ex sunt, veritatis sapiente tenetur corporis laboriosam debitis molestiae explicabo eligendi rerum est, optio aperiam minus labore excepturi illo facilis veniam.
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi fuga odit, dolor nostrum optio vitae deleniti tenetur libero eos porro fugiat rem, quibusdam dolorum molestiae, dolore delectus eum voluptate obcaecati.
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, ea? Porro impedit enim pariatur. Praesentium repellendus, cumque aut amet veniam repudiandae nisi voluptates quos architecto, dolore minus doloremque, delectus corrupti!
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat natus accusamus maxime illo animi, sed sunt, impedit voluptates corrupti aut quam obcaecati, illum voluptatibus! Molestiae quo eligendi est asperiores quia.
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos alias asperiores eligendi, ullam illum nostrum! Nulla illo commodi quaerat possimus soluta dolorem excepturi vero, laudantium blanditiis at sit quod nam?
+		</p>
+	</div>
+</body>
+</html>
